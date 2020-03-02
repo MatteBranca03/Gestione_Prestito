@@ -24,7 +24,7 @@ namespace Gestione_Prestito
         {
             InitializeComponent();
             ComboBox.Items.Add("perugia");
-        }
+        } 
 
         private void btnCalcola_Click(object sender, RoutedEventArgs e)
         {
