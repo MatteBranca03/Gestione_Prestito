@@ -23,30 +23,53 @@ namespace Gestione_Prestito
         public MainWindow()
         {
             InitializeComponent();
-            ComboBox.Items.Add("perugia");
-        } 
+        }
+        string nat = null;
 
         private void btnCalcola_Click(object sender, RoutedEventArgs e)
         {
             
-            string Cognome = txtCognome.Text;
-            string Nome = txtNome.Text;
-            if (btnF.IsChecked == true)
+            string Cognome = txtCognome1.Text;
+            string Nome = txtNome1.Text;
+            if (btnF1.IsChecked == true)
             {
-                N
+                nat = "nata";
             }
             else
             {
-                btnF.IsChecked = false;
+                nat = "nato";
+                btnF1.IsChecked = false;
             }
             DatePicker DataTime = new DatePicker();
-            double Importo = double.Parse(txtImporto.Text);
-            double Rate = double.Parse(txtRate.Text);
-            double Percentuale = double.Parse(txtPercentuale.Text);
-            double DaRestituire = Importo * Percentuale / 100;
-            txtRestituire.Text = 
-            double ImportoRata = DaRestituire / Rate;
-            txtImpRata
+            double Importo = double.Parse(txtImporto1.Text);
+            double Rate = double.Parse(txtRate1.Text);
+            double Percentuale = double.Parse(txtPercentuale1.Text);
+            double DaRestituire = (Importo * Percentuale / 100) + Importo; 
+            txtDaRestituire.Text = DaRestituire.ToString();
+            double ImportoRate = DaRestituire / Rate;
+            txtImpRate.Text = ImportoRate.ToString();
+            lblRisultato1.Content = ($"{txtCognome1.Text} {txtNome1.Text} residente in {ComboBox1.Text} {nat} il {DataTime1.Text}.\nPrestito di {txtImporto1.Text} ad un tasso del {txtPercentuale1.Text}% da restituire in {txtRate1.Text} rate da {txtImpRate.Text} ciascuna, per un totale si {txtDaRestituire.Text}");
+        }
+
+        private void btnStampa_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void btnNuovo1_Click(object sender, RoutedEventArgs e)
+        {
+            txtNome1.Clear();
+            txtCognome1.Clear();
+            txtImporto1.Clear();
+            txtRate1.Clear();
+            txtPercentuale1.Clear();
+            txtDaRestituire.Clear();
+            txtImpRate.Clear();
+            DataTime1.SelectedDate = null;
+            ComboBox1.SelectedItem = null;
+            btnF1.IsChecked = false;
+            btnM1.IsChecked = false;
+            lblRisultato1.Content = null;
         }
     }
 }

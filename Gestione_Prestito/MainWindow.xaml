@@ -17,21 +17,30 @@
         <TextBlock HorizontalAlignment="Left" Height="32" Margin="379,141,0,0" Text="Percentuale" TextWrapping="Wrap" VerticalAlignment="Top" Width="104"/>
         <TextBlock HorizontalAlignment="Left" Height="32" Margin="379,200,0,0" Text="Importo da restituire" TextWrapping="Wrap" VerticalAlignment="Top" Width="104"/>
         <TextBlock HorizontalAlignment="Left" Height="32" Margin="379,258,0,0" Text="Importo per rata" TextWrapping="Wrap" VerticalAlignment="Top" Width="104"/>
-        <TextBox Name ="txtCognome"  HorizontalAlignment="Left" Height="32" Margin="125,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
-        <TextBox Name="txtNome"  HorizontalAlignment="Left" Height="32" Margin="125,91,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
-        <TextBox Name="txtImporto" HorizontalAlignment="Left" Height="32" Margin="488,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
-        <TextBox Name="txtRate" HorizontalAlignment="Left" Height="32" Margin="488,91,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.508,2.145"/>
-        <TextBox Name="txtPercentuale" HorizontalAlignment="Left" Height="32" Margin="488,141,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
-        <TextBox Name="txtRestituire" HorizontalAlignment="Left" Height="32" Margin="488,200,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" IsEnabled="False"/>
-        <TextBox Name="txtImpRata" HorizontalAlignment="Left" Height="32" Margin="488,258,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" IsEnabled="False"/>
-        <Button Name="btnCalcola" Content="Calcola" HorizontalAlignment="Left" Height="46" Margin="660,52,0,0" VerticalAlignment="Top" Width="117" Click="btnCalcola_Click"/>
-        <Button Name="btnNuovo" Content="Nuovo" HorizontalAlignment="Left" Height="46" Margin="660,141,0,0" VerticalAlignment="Top" Width="117"/>
-        <Button Name="btnStampa" Content="Stampa" HorizontalAlignment="Left" Height="46" Margin="660,228,0,0" VerticalAlignment="Top" Width="117"/>
-        <DatePicker Name="DataTime" HorizontalAlignment="Left" Height="32" Margin="120,200,0,0" VerticalAlignment="Top" Width="152"/>
-        <ComboBox Name="ComboBox" HorizontalAlignment="Left" Height="32" Margin="120,258,0,0" VerticalAlignment="Top" Width="139"/>
-        <Label Name="lblRisultato" Content="Label" HorizontalAlignment="Left" Height="106" Margin="16,318,0,0" VerticalAlignment="Top" Width="774"/>
-        <RadioButton Name="btnF" Content="F" HorizontalAlignment="Left" Height="23" Margin="125,141,0,0" VerticalAlignment="Top" Width="31"/>
-        <RadioButton Name="btnM" Content="M" HorizontalAlignment="Left" Height="23" Margin="174,141,0,0" VerticalAlignment="Top" Width="31" RenderTransformOrigin="2.776,0.604"/>
+        <TextBox x:Name ="txtCognome1"  HorizontalAlignment="Left" Height="32" Margin="125,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <TextBox x:Name="txtNome1"  HorizontalAlignment="Left" Height="32" Margin="125,91,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <TextBox x:Name="txtImporto1" HorizontalAlignment="Left" Height="32" Margin="488,36,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="134"/>
+        <TextBox x:Name="txtRate1" HorizontalAlignment="Left" Height="32" Margin="488,91,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.508,2.145"/>
+        <TextBox x:Name="txtDaRestituire" HorizontalAlignment="Left" Height="32" Margin="488,0,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Center" Width="134" IsReadOnly="True"/>
+        <Button x:Name="btnCalcola1" Content="Calcola" HorizontalAlignment="Left" Height="46" Margin="660,52,0,0" VerticalAlignment="Top" Width="117" Click="btnCalcola_Click"/>
+        <Button x:Name="btnNuovo1" Content="Nuovo" HorizontalAlignment="Left" Height="46" Margin="660,141,0,0" VerticalAlignment="Top" Width="117" Click="btnNuovo1_Click"/>
+        <Button x:Name="btnStampa1" Content="Stampa" HorizontalAlignment="Left" Height="46" Margin="660,228,0,0" VerticalAlignment="Top" Width="117" Click="btnStampa_Click"/>
+        <DatePicker x:Name="DataTime1" HorizontalAlignment="Left" Height="32" Margin="120,200,0,0" VerticalAlignment="Top" Width="152"/>
+        <ComboBox x:Name="ComboBox1" HorizontalAlignment="Left" Height="32" Margin="120,258,0,0" VerticalAlignment="Top" Width="139">
+            <ComboBoxItem>Perugia</ComboBoxItem> 
+            <ComboBoxItem>Terni</ComboBoxItem>
+            <ComboBoxItem>Spello</ComboBoxItem>
+            <ComboBoxItem>Citta de castello</ComboBoxItem>
+            <ComboBoxItem>Umbertide</ComboBoxItem>
+            <ComboBoxItem>Assisi</ComboBoxItem>
+            <ComboBoxItem>Foligno</ComboBoxItem>
+            <ComboBoxItem>Gubbio</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="lblRisultato1" HorizontalAlignment="Left" Height="106" Margin="16,318,0,0" VerticalAlignment="Top" Width="774"/>
+        <RadioButton x:Name="btnF1" Content="F" HorizontalAlignment="Left" Height="23" Margin="125,141,0,0" VerticalAlignment="Top" Width="31"/>
+        <RadioButton x:Name="btnM1" Content="M" HorizontalAlignment="Left" Height="23" Margin="174,141,0,0" VerticalAlignment="Top" Width="31" RenderTransformOrigin="2.776,0.604"/>
+        <TextBox x:Name="txtPercentuale1" HorizontalAlignment="Left" Height="32" Margin="488,141,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" RenderTransformOrigin="0.508,2.145"/>
+        <TextBox x:Name="txtImpRate" HorizontalAlignment="Left" Height="32" Margin="488,258,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="134" IsReadOnly="True"/>
 
     </Grid>
 </Window>
